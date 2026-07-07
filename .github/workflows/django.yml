@@ -3,14 +3,14 @@ name: Python application
 on:
   push:
     branches: 
-      - egc_test
-strategy:
-  matrix:
-    postres-version: ['14.9', '15']
-  
+      - egc_test  
 
 jobs:
   build:
+
+    strategy:
+      matrix:
+        postres-version: ['14.9', '15']
 
     runs-on: ubuntu-latest
 
